@@ -14,14 +14,14 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_santoni.mk \
-	$(LOCAL_DIR)/full_santoni.mk
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 
-PRODUCT_MAKEFILES += \
-	$(LOCAL_DIR)/twrp_santoni.mk
+# Inherit from device
+$(call inherit-product, device/xiaomi/santoni/full_santoni.mk)
 
-COMMON_LUNCH_CHOICES += \
-	twrp_santoni-user \
-	twrp_santoni-userdebug \
-	twrp_santoni-eng
+# Inherit common product files.
+$(call inherit-product, vendor/twrp/config/common.mk)
+
+# Set those variables here to overwrite the inherited values.
+PRODUCT_NAME := twrp_santoni

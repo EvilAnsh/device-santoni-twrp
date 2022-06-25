@@ -54,8 +54,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
    	export OF_NO_MIUI_OTA_VENDOR_BACKUP="1"
    	export OF_NO_TREBLE_COMPATIBILITY_CHECK="1"
 	export OF_USE_SYSTEM_FINGERPRINT="1"
-   	export OF_MAINTAINER=Jabiyeff
-   	export OF_MAINTAINER_AVATAR="/home/jabiyeff/ofrp/device/xiaomi/santoni/addon/avatar.png"
+   	export OF_MAINTAINER=EvilAnsh
+   	export OF_MAINTAINER_AVATAR="/root/ofrp/device/xiaomi/santoni/addon/avatar.png"
    	export LC_ALL="C"
    	export ALLOW_MISSING_DEPENDENCIES=true
 	export OF_SKIP_DECRYPTED_ADOPTED_STORAGE="1"
@@ -69,15 +69,15 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR="1"
 
         # -- add settings for R11 --
-        export FOX_VERSION="R11.1_5"
+        export FOX_VERSION="R11.1_6"
         export FOX_BUILD_TYPE=Stable
         export OF_USE_TWRP_SAR_DETECT="1"
         export OF_DISABLE_MIUI_OTA_BY_DEFAULT="1"
         export OF_QUICK_BACKUP_LIST="/system_root;/vendor;/data;/persist;/boot;"
         # -- end R11 settings --
 
-        # use magisk 23.0 for the magisk addon
-        export FOX_USE_SPECIFIC_MAGISK_ZIP="/home/jabiyeff/ofrp/device/xiaomi/santoni/addon/Magisk-24.1.zip"
+        # use magisk 25.1 for the magisk addon
+        export FOX_USE_SPECIFIC_MAGISK_ZIP="/root/ofrp/device/xiaomi/santoni/addon/Magisk-v25.1.zip"
 
         # -- Enable CCACHE --
         export USE_CCACHE=1
